@@ -1,0 +1,433 @@
+/* ===================== */
+/* VARIÁVEIS E RESET     */
+/* ===================== */
+:root {
+  --primary-color: #1a416f;
+  --secondary-color: #ee3131;
+  --text-color: #333;
+}
+
+* {
+  font-family: poppins, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ===================== */
+/* ELEMENTOS GERAIS      */
+/* ===================== */
+input {
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 10px;
+  width: 400px;
+  font-size: 1rem;
+  color: var(--text-color);
+  outline: none;
+}
+
+button,
+#sendbtn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+i {
+  font-size: 2rem;
+}
+
+/* ===================== */
+/* HEADER E NAVEGAÇÃO    */
+/* ===================== */
+#header-container {
+  z-index: 999;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 50px;
+}
+#headerbtn-conteiner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#togglebtn {
+  display: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-flex;
+}
+
+nav > ul > li > a {
+  color: var(--primary-color);
+}
+
+nav > ul > li > a:hover {
+  color: var(--secondary-color);
+  transition: all 0.5s ease;
+}
+
+.logo {
+  height: auto;
+
+  width: 100px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header .action-button {
+  border: solid 2px var(--primary-color);
+  color: var(--primary-color);
+}
+
+header .action-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* ===================== */
+/* HERO SECTION          */
+/* ===================== */
+main {
+  background-color: white;
+  margin: 0px 20vh 0px 20vh;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+  padding-top: 110px;
+}
+
+.video-container video {
+  object-fit: cover;
+  aspect-ratio: 18/12;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+#hero > aside > h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 2.5rem;
+
+  color: var(--primary-color);
+}
+
+#hero .action-button {
+  background-color: var(--secondary-color);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#hero .action-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* ===================== */
+/* EBOOK                 */
+/* ===================== */
+
+#ebook {
+  display: flex;
+  justify-self: center;
+  padding-top: 50px;
+  height: 8rem;
+  width: auto;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* TESTEMUNHOS           */
+/* ===================== */
+#testimonials {
+  padding-top: 40px;
+}
+
+#titleT {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+#titleT h2 {
+  padding-left: 180px;
+}
+
+.testimonial-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: 30px;
+  height: 40vh;
+}
+
+#rightGradient,
+#leftGradient {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 1;
+}
+
+#rightGradient {
+  right: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+#leftGradient {
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  transition: none;
+  will-change: transform;
+}
+
+.testimonial-container {
+  min-width: 300px;
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.testimonial > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  /* object-fit: cover; */
+}
+
+/* ===================== */
+/* PRICING               */
+/* ===================== */
+#pricing {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-top: 80px;
+  background: linear-gradient(
+    158deg,
+    rgba(42, 85, 155, 1) 0%,
+    rgba(139, 87, 199, 1) 50%,
+    rgba(204, 41, 41, 1) 100%
+  );
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.price-container {
+  display: flex;
+  padding: 50px;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.price-container > img {
+  height: 280px;
+}
+
+.payment-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-info > :first-child {
+  padding-right: 10px;
+}
+
+#priceSec-container {
+  display: flex;
+  gap: 25px;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#paymethods-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 0 0;
+}
+
+.pricing-card > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card > ul li {
+  padding: 10px;
+  border: solid 1px white;
+  border-radius: 30px;
+}
+
+.pricing-card .action-button {
+  align-self: center;
+  border: solid 2px #ff2c2c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--secondary-color);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.pricing-card .action-button:hover {
+  scale: 1.08;
+}
+
+/* ===================== */
+/* NEWSLETTER            */
+/* ===================== */
+#newsletter {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#newsletter > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  border: solid 2px var(--primary-color);
+  border-radius: 20px;
+  margin: 20px 0;
+  width: 55vw;
+}
+
+#newsletter > div > h2 {
+  color: var(--primary-color);
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#sendbtn {
+  align-self: center;
+  width: fit-content;
+}
+
+/* ===================== */
+/* FIM                   */
+/* ===================== */
+
+#footer-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#circle {
+  position: absolute;
+  top: -30 px;
+  left: -30px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 1;
+  background-color: rgb(183, 236, 252);
+}
+
+#footer-container .logo {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}

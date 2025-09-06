@@ -1,0 +1,62 @@
+@media screen and (max-width: 768px) {
+  main {
+    margin: 0px 5vh 0px 5vh;
+  }
+
+  #header-container {
+    justify-content: space-between;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  #togglebtn {
+    display: block;
+  }
+
+  #hero {
+    flex-direction: column;
+  }
+
+  #pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #paymethods-container {
+    order: 1;
+  }
+  #priceSec-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #paymethods-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pricing-card > ul {
+    padding: 0 0 20px 0;
+  }
+
+  #hero > aside > h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  #hero > aside > p {
+    text-align: center;
+  }
+
+  #hero > aside > .action-button {
+    text-align: center;
+    justify-self: center;
+  }
+
+  #ebook {
+    width: 100%;
+    height: auto;
+  }
+}
